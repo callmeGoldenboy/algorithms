@@ -3,14 +3,18 @@ Given a stream of tuples, where each tuple contains a number and a sign (+/-), i
 in the stream cancel eacheother out in such a way that ther is only a unique number at the end. 
 
 Examples:
-If the stream consists of [(4,'+'), (2,'+'),(2,'-'),(4,'+'),(3,'+'),(3,'-')], the algorithm will return 4, since the 2s and 3s will cancel eachother out
-and there will only be 4s left
-
-If the stream consists of [(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+')], the algorithm returns 2, since the stream only consists of the same number and sign
-
-If the stream consists of [(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(1,'+')], the algorithm returns None, since there will be 2 different number remaining 
-
-
+#1 
+Input:  [(4,'+'), (2,'+'),(2,'-'),(4,'+'),(3,'+'),(3,'-')],
+Output: 4 
+Comment: Since 2 and 3 gets removed.
+#2 
+Input:  [(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+')]
+Output: 2 
+Comment: No other numbers present
+#3
+Input:  [(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(2,'+'),(1,'+')]
+Output: None 
+Comment: Not 1-sparse
 """
 
 def one_sparse(array):
